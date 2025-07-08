@@ -35,15 +35,14 @@ Descope Access Keys enable secure, automated authentication between services (M2
    - **Expiration** (set expiry for security)
    - **Permitted IPs** (optional, restrict usage)
    - **Authorization** (assign tenants/roles)
-4. Save and copy the Access Key **ID** and **Secret** (cleartext). Store securely.
+4. Save and copy the **Access Key** (the full value shown once). Store securely.
 
 > See: [Descope Access Keys Guide](https://docs.descope.com/management/m2m-access-keys)
 
-### 2. Obtain Management Key and Project ID
+### 2. Obtain Project ID
 
-- Go to **Management Keys** in the Descope Console.
-- Create a new key, set expiration, and copy the key and your Project ID.
-- Store these securely. You will not be able to view the key again.
+- Go to **Project Settings** in the Descope Console.
+- Copy your Project ID and store it securely.
 
 ---
 
@@ -76,12 +75,15 @@ Create a `.env` file in the project root with the following:
 
 ```env
 DESCOPE_PROJECT_ID=<your-descope-project-id>
-DESCOPE_MANAGEMENT_KEY=<your-management-key>
-DESCOPE_ACCESS_KEY_ID=<your-access-key-id>
-DESCOPE_ACCESS_KEY_SECRET=<your-access-key-secret>
+DESCOPE_ACCESS_KEY=<your-access-key>
 PORT=8081
 API_BASE_URL=http://localhost:8081
 ```
+
+- `DESCOPE_PROJECT_ID`: Your Descope project ID (from the Descope Console)
+- `DESCOPE_ACCESS_KEY`: The full Access Key value (not split into ID/Secret)
+- `PORT`: (Optional) Port for the API server (default: 8081)
+- `API_BASE_URL`: (Optional) Base URL for API requests (default: http://localhost:8081)
 
 ---
 

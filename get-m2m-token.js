@@ -7,7 +7,7 @@ const descope = require('@descope/node-sdk');
 const {
   DESCOPE_PROJECT_ID: PROJECT_ID,
   DESCOPE_ACCESS_KEY: ACCESS_KEY,
-  API_BASE_URL = 'http://localhost:8081',
+  API_BASE_URL = 'http://localhost:3000',
   NODE_ENV
 } = process.env;
 
