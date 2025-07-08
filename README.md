@@ -60,10 +60,6 @@ To use all endpoints in this demo, configure the following permissions and roles
 
 ### Roles
 - `Admin` — Required for GET /admin-resource
-- `AppSecEngineer` — Required for GET /tenant-resource (must be assigned within the specified tenant)
-
-### Tenants
-- Example tenant ID: `T2U7vUH1NPy4JzWHruoOVIGyzYlu` (for tenant-resource endpoint)
 
 > Ensure your Access Key is associated with the correct permissions and roles (and tenant, if needed) in the Descope Console. This will allow you to successfully call all protected endpoints in the demo.
 
@@ -76,14 +72,14 @@ Create a `.env` file in the project root with the following:
 ```env
 DESCOPE_PROJECT_ID=<your-descope-project-id>
 DESCOPE_ACCESS_KEY=<your-access-key>
-PORT=8081
-API_BASE_URL=http://localhost:8081
+PORT=3000
+API_BASE_URL=http://localhost:3000
 ```
 
 - `DESCOPE_PROJECT_ID`: Your Descope project ID (from the Descope Console)
 - `DESCOPE_ACCESS_KEY`: The full Access Key value (not split into ID/Secret)
-- `PORT`: (Optional) Port for the API server (default: 8081)
-- `API_BASE_URL`: (Optional) Base URL for API requests (default: http://localhost:8081)
+- `PORT`: (Optional) Port for the API server (default: 3000)
+- `API_BASE_URL`: (Optional) Base URL for API requests (default: http://localhost:3000)
 
 ---
 
@@ -91,7 +87,6 @@ API_BASE_URL=http://localhost:8081
 
 ```bash
 npm install
-npm install @descope/node-sdk
 ```
 
 ---
