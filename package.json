@@ -1,0 +1,22 @@
+{
+  "name": "m2m-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./server/index.js",
+  "scripts": {
+    "m2m": "node ./get-m2m-token.js",
+    "server": "nodemon ./server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@descope/node-sdk": "^1.7.8",
+    "axios": "^1.10.0",
+    "dotenv": "^17.1.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
